@@ -71,7 +71,7 @@ namespace week2day3
             do
             {
                 Console.WriteLine("What is your letter grade for the class? (No +/-, please)");
-                string letterGrade = Console.ReadLine().ToLower().Trim();
+                string letterGrade = Console.ReadLine().ToLower().Trim(); 
 
                 switch (letterGrade)
                 {
