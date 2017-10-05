@@ -60,50 +60,50 @@ namespace week2day3
 
 
 
-            //GPA calculation
-            Console.WriteLine("Would you like GPA calculation?");
-            string gpaConsent = Console.ReadLine().ToUpper();
+            ////GPA calculation //it works
+            //Console.WriteLine("Would you like GPA calculation?");
+            //string gpaConsent = Console.ReadLine().ToUpper();
 
-            double gpa = 0;
-            int classes = 0;
-            double totgpa = 0;
+            //double gpa = 0;
+            //int classes = 0;
+            //double totgpa = 0;
 
-            do
-            {
-                Console.WriteLine("What is your letter grade for the class? (No +/-, please)");
-                string letterGrade = Console.ReadLine().ToLower().Trim(); 
+            //do
+            //{
+            //    Console.WriteLine("What is your letter grade for the class? (No +/-, please)");
+            //    string letterGrade = Console.ReadLine().ToLower().Trim(); 
 
-                switch (letterGrade)
-                {
-                    case "a":
-                        gpa = 4.0;
-                        break;
-                    case "b":
-                        gpa = 3.0;
-                        break;
-                    case "c":
-                        gpa = 2.0;
-                        break;
-                    case "d":
-                        gpa = 1.0;
-                        break;
-                    case "f":
-                        gpa = 0.0;
-                        break;
-                    default:
-                        Console.WriteLine("Please write your class letter grade.");
-                        continue;
-                        break;
-                }
-                totgpa = totgpa + gpa;
-                Console.WriteLine("Do you have another class you'd like to add? (YES/NO)");
-                gpaConsent = Console.ReadLine().ToUpper().Trim();
-                classes++;
-            }
-            while (gpaConsent == "YES");
+            //    switch (letterGrade)
+            //    {
+            //        case "a":
+            //            gpa = 4.0;
+            //            break;
+            //        case "b":
+            //            gpa = 3.0;
+            //            break;
+            //        case "c":
+            //            gpa = 2.0;
+            //            break;
+            //        case "d":
+            //            gpa = 1.0;
+            //            break;
+            //        case "f":
+            //            gpa = 0.0;
+            //            break;
+            //        default:
+            //            Console.WriteLine("Please write your class letter grade.");
+            //            continue;
+            //            break;
+            //    }
+            //    totgpa = totgpa + gpa;
+            //    Console.WriteLine("Do you have another class you'd like to add? (YES/NO)");
+            //    gpaConsent = Console.ReadLine().ToUpper().Trim();
+            //    classes++;
+            //}
+            //while (gpaConsent == "YES");
 
-            double averageGpa = totgpa / classes;
-            Console.WriteLine("Your GPA is " + averageGpa);
+            //double averageGpa = totgpa / classes;
+            //Console.WriteLine("Your GPA is " + averageGpa);
 
 
             ////this is called "Continue"
@@ -151,10 +151,35 @@ namespace week2day3
 
 
             //Methods
+            //Now inside the Main
+            //Let's use our method
+
+            int answer = Add(5, 7);
+
+            Console.WriteLine("Answer is " + answer);
+
+            int fnum = int.Parse(Console.ReadLine());
+            int snum = int.Parse(Console.ReadLine());
+
+            answer = Add(fnum, snum);
+            Console.WriteLine("Answer is " + answer);
+
+            //or don't create a variable, to just print it to the screen just then.
+
+            Console.WriteLine(Add(5, 7));
+            //so actually i see how making a method would have been helpful for the Fortune Teller color question.
+            
 
 
 
 
+        }
+        //methods must be inside "class program" cannot be in "static void Main" because that is a method!!!
+        public static int Add(int firstNumber, int secondNumber)
+        {
+            int sum = firstNumber + secondNumber;
+
+            return sum;
         }
     }
 }
